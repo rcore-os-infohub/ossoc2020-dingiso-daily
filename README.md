@@ -11,40 +11,34 @@
 | 20   | 21   | 22   | 23   | 24   | 25   | 26   |
 
 =======
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/dingiso/DailySchedule/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+* [Day 0 (6.27)](#0)  
+* [Day 1 (4.10)](#Day001)   
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+<span id="0"></span>
+## Day 0
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### 事件1： 学习Rust基础知识
 
-```markdown
-Syntax highlighted code block
+《Rust编程之道》 第二章 语言精要 - 2.1 - 2.7
 
-# Header 1
-## Header 2
-### Header 3
+研究清楚关于 Rust的 <kbd> ownership</kbd>
 
-- Bulleted
-- List
+### 事件2：完成rustlings 部分练习
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
+### 问题：
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+**如何 选取重要的部分 赋予更多的精力 ， 而 繁杂的部分在实践中融会贯通？**
 
-### Jekyll Themes
+Rust 内容过于繁杂， 从面向对象的半编译半解释性 java 编程语言 到  编译型语言 Rust ，我试着通过安全的角度 或者 实用的角度去逐渐思考 为什么 要去 定义这样一个变量，定义成什么类型，怎样去表示他等方面，我还记得 老师 告诉我们 8/2 原则，学一门语言的 20% 常用的部分，而在实际中扩展自己的剩下80%。 但Rust试图将他的全部展现给我，我试着不断去理解，也探索了很多。
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dingiso/DailySchedule/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### 预计计划：  
 
-### Support or Contact
+1、学习剩下的 常用集合 ，智能指针 ， 泛型和trait  
+2、完成 rustlings 的 剩下部分内容 
+3、温习 操作系统的 相关内容、  
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<span id="Day001"></span>
