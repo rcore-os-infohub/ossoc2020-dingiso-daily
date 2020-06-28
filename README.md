@@ -1,4 +1,4 @@
-#DailySchedule
+# DailySchedule
 ## 日常记录 for Rust and zcore
 六月末 AND 七月初
 
@@ -26,6 +26,7 @@
 研究清楚关于 Rust的 <kbd> ownership</kbd>
 
 ### 事件2：完成rustlings 部分练习
+**variables - if - functions - primitive-types - structs**
 ![Day1](https://github.com/dingiso/DailySchedule/blob/master/img/Day1.png?raw=true)
 ### 问题：
 
