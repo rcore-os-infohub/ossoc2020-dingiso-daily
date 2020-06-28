@@ -27,7 +27,7 @@
 
 ### 事件2：完成rustlings 部分练习
 **variables - if - functions - primitive-types - structs**
-<img src="https://github.com/dingiso/DailySchedule/blob/master/img/Day1.png?raw=true" alt="启动VMM流程图" width="60%" height="200px" />
+<img src="https://github.com/dingiso/DailySchedule/blob/master/img/Day1.png?raw=true" alt="启动VMM流程图" width="50%" height="50%" />
 ![Day1](https://github.com/dingiso/DailySchedule/blob/master/img/Day1.png?raw=true)
 ### 问题：
 
