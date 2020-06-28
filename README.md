@@ -26,7 +26,8 @@
 研究清楚关于 Rust的 <kbd> ownership</kbd>
 
 ### 事件2：完成rustlings 部分练习
-<img src="https://github.com/dingiso/DailySchedule/blob/master/img/Day1.png?raw=true" alt="启动VMM流程图" width="50%" height="50%" />
+<img src="https://github.com/dingiso/DailySchedule/blob/master/img/Day1.png?raw=true" alt="启动VMM流程图" width="40%" height="40%" />
+
 ### 问题：
 
 **如何 选取重要的部分 赋予更多的精力 ， 而 繁杂的部分在实践中融会贯通？**
