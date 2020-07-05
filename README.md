@@ -14,7 +14,7 @@
 
 * [Day 0 (6.27)](#0)  
 * [Day 1 (4.10)](#Day001)   
-
+* [Day 2 (7.5)](#Day002)   
 
 <span id="0"></span>
 ## Day 0
@@ -26,7 +26,7 @@
 研究清楚关于 Rust的 <kbd> ownership</kbd>
 
 ### 事件2：完成rustlings 部分练习
-<img src="https://github.com/dingiso/DailySchedule/blob/master/img/Day1.png?raw=true" alt="启动VMM流程图" width="40%" height="40%" />
+<img src="https://github.com/dingiso/DailySchedule/blob/master/img/Day1.png?raw=true" alt="rustlings部分练习" width="40%" height="40%" />
 
 ### 问题：
 
@@ -41,3 +41,28 @@ Rust 内容过于繁杂， 从面向对象的半编译半解释性 java 编程�
 3、温习 操作系统的 相关内容 
 
 <span id="Day001"></span>
+
+## Day 1
+
+### 事件1： 学习Rust基础知识
+
+《Rust编程之道》 第二章 语言精要 - 完成
+
+[用Rust写操作系统](https://learningos.github.io/rcore_step_by_step_webdoc/#从零开始写-os)
+
+### 事件2：完成rustlings 全部练习
+
+<img src="https://github.com/dingiso/DailySchedule/blob/master/img/Day2.png?raw=true" alt="rustlings全部练习" width="40%" height="40%" />
+
+### 问题：
+
+**rust 教程中有哪些重点和操作系统需要用到的相关，需要学习的比较深入？**
+
+### 预计计划：  
+
+1、精通完善 模块 ，macro_rules! , 
+2、利用 rust 完成 中长练习题
+3、温习 操作系统的 相关内容、
+
+<span id="Day002"></span>
+
