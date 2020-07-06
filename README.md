@@ -66,3 +66,28 @@ Rust 内容过于繁杂， 从面向对象的半编译半解释性 java 编程�
 
 <span id="Day002"></span>
 
+## Day 2
+
+### 事件1： 学习Rust基础知识
+
+《Rust编程之道》 第三，四，五章  - 粗略看完
+
+ Rust视频教程部分基础部分-看完-巩固复习
+
+[Rust编程视频教程](https://www.bilibili.com/video/BV1xJ411B79h?from=search&seid=11648763424608637522)
+
+### 事件2：对基础知识部分进行总结，形成xmind 文件
+
+<img src="https://github.com/dingiso/DailySchedule/blob/master/img/Rust.png?raw=true" alt="rust总结" width="40%" height="40%" />
+
+### 问题：
+
+Rust 中 的 **Error E5020** 的相关问题
+
+### 预计计划：  
+
+1、细看剩下的章节 
+2、利用 rust 完成 中长练习题
+3、温习 操作系统的 相关内容
+
+<span id="Day003"></span>
