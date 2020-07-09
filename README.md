@@ -118,3 +118,30 @@ Rust 中 的 全局变量，可变全局变量的声明
 3、温习 操作系统的 相关内容
 
 <span id="Day004"></span>
+## Day4
+
+### 事件1： 练习Rust
+
+完成leetcode 5道练习题
+
+### 事件2：读RISC-V 官方文档
+
+
+
+### 解决问题：
+
+Rust 中 linkedlist 等的数据结构
+
+### 预计计划：  
+
+1、进入RISC-v
+2、利用 rust 完成 中长练习题
+3、温习 操作系统的 相关内容
+
+<span id="Day005"></span>
+
+## Day5
+
+今天有考试 ， 复习了一天 :blonde_woman:
+
+<span id="Day006"></span>
