@@ -206,11 +206,11 @@ Rust 中的 生命周期的内容
 
 实现了内存的动态分配
 
-<img src="https://github.com/dingiso/DailySchedule/blob/master/img/Day17-1.png?raw=true" alt="内存的动态分配"/>
+<img src="https://github.com/dingiso/DailySchedule/blob/master/img/Day17-1.png?raw=true" alt="内存的动态分配" width="40%" height="40%" />
 
 探测了内核的结尾地址
 
-<img src="https://github.com/dingiso/DailySchedule/blob/master/img/Day17-2.png?raw=true" alt="探测了内核的结尾地址"/>
+<img src="https://github.com/dingiso/DailySchedule/blob/master/img/Day17-2.png?raw=true" alt="探测了内核的结尾地址" width="40%" height="40%" />
 
 ### 事件2： 每日一题
 
