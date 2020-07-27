@@ -759,6 +759,9 @@ lab-1 程序运行状态 Context 推荐加入源文件的注释 , 并去掉 `Sca
 
 [392.判断子序列](https://leetcode-cn.com/problems/is-subsequence/)
 
+#### 事件3： 看lab-6 实验
+继续进行lab-6 的实验题 冲冲冲！！！
+
 #### 尾声
 
 希望接下能进入第二阶段的实习吧。
