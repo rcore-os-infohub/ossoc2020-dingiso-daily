@@ -52,3 +52,58 @@ impl Swapper for FIFOSwapper {
         self.queue.retain(|(vpn, _)| predicate(vpn));
     }
 }
+
+/// 时钟页面置换算法基础实现：Clock
+pub struct CLOCKSwapper {
+    /// 记录映射和添加的顺序
+    vec: Vec<(VirtualPageNumber, FrameTracker, *mut PageTableEntry)>,
+    /// 映射数量上限
+    quota: usize,
+    position: usize,
+}
+
+unsafe impl Send for CLOCKSwapper {}
+
+impl Swapper for CLOCKSwapper {
+    fn new(quota: usize) -> Self {
+        Self {
+            vec: Vec::new(),
+            quota,
+            position: 0,
+        }
+    }
+
+    fn full(&self) -> bool {
+        self.vec.len() == self.quota
+    }
+
+    fn pop(&mut self) -> Option<(VirtualPageNumber, FrameTracker)> {
+        if self.vec.len() == 0 {
+            return None;
+        }
+        loop {
+            let pte = self.vec[self.position].2;
+            let flags = unsafe { pte.as_ref().unwrap().flags() };
+            if flags.contains(Flags::ACCESSED) && flags.contains(Flags::DIRTY) {
+                let new_flags = flags & !Flags::ACCESSED;
+                unsafe { pte.as_mut().unwrap().set_flags(new_flags); }
+            }
+            else if flags.contains(Flags::ACCESSED) || flags.contains(Flags::DIRTY) {
+                let new_flags = flags & !Flags::ACCESSED & !Flags::DIRTY;
+                unsafe { pte.as_mut().unwrap().set_flags(new_flags); }
+            } else {
+                let res = self.vec.remove(self.position);
+                return Some((res.0, res.1));
+            }
+            self.position = (self.position + 1) % self.quota;
+        }
+    }
+
+    fn push(&mut self, vpn: VirtualPageNumber, frame: FrameTracker, entry: *mut PageTableEntry) {
+        self.vec.insert(self.position, (vpn, frame, entry));
+    }
+
+    fn retain(&mut self, predicate: impl Fn(&VirtualPageNumber) -> bool) {
+        self.vec.retain(|(vpn, _, _)| predicate(vpn));
+    }
+}
