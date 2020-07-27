@@ -59,7 +59,7 @@ pub struct CLOCKSwapper {
     vec: Vec<(VirtualPageNumber, FrameTracker, *mut PageTableEntry)>,
     /// 映射数量上限
     quota: usize,
-    position: usize,
+    cloct_tick: usize,
 }
 
 unsafe impl Send for CLOCKSwapper {}
@@ -69,7 +69,7 @@ impl Swapper for CLOCKSwapper {
         Self {
             vec: Vec::new(),
             quota,
-            position: 0,
+            cloct_tick: 0,
         }
     }
 
@@ -82,25 +82,25 @@ impl Swapper for CLOCKSwapper {
             return None;
         }
         loop {
-            let pte = self.vec[self.position].2;
-            let flags = unsafe { pte.as_ref().unwrap().flags() };
+            let PageTE = self.vec[self.cloct_tick].2;
+            let flags = unsafe { PageTE.as_ref().unwrap().flags() };
             if flags.contains(Flags::ACCESSED) && flags.contains(Flags::DIRTY) {
                 let new_flags = flags & !Flags::ACCESSED;
-                unsafe { pte.as_mut().unwrap().set_flags(new_flags); }
+                unsafe { PageTE.as_mut().unwrap().set_flags(new_flags); }
             }
             else if flags.contains(Flags::ACCESSED) || flags.contains(Flags::DIRTY) {
                 let new_flags = flags & !Flags::ACCESSED & !Flags::DIRTY;
-                unsafe { pte.as_mut().unwrap().set_flags(new_flags); }
+                unsafe { PageTE.as_mut().unwrap().set_flags(new_flags); }
             } else {
-                let res = self.vec.remove(self.position);
+                let res = self.vec.remove(self.cloct_tick);
                 return Some((res.0, res.1));
             }
-            self.position = (self.position + 1) % self.quota;
+            self.cloct_tick = (self.cloct_tick + 1) % self.quota;
         }
     }
 
     fn push(&mut self, vpn: VirtualPageNumber, frame: FrameTracker, entry: *mut PageTableEntry) {
-        self.vec.insert(self.position, (vpn, frame, entry));
+        self.vec.insert(self.cloct_tick, (vpn, frame, entry));
     }
 
     fn retain(&mut self, predicate: impl Fn(&VirtualPageNumber) -> bool) {
