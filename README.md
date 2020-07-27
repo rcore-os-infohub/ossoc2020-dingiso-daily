@@ -169,7 +169,7 @@ Rust 中 linkedlist 等的数据结构
 
 ### 事件1： 读完 计算机组成原理 RISC-V 前两章
 
-
+[读书笔记](https://github.com/dingiso/DailySchedule/blob/master/docs/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1RISC-V.md)
 
 ### 事件2： 看 浙大 的视频
 
@@ -187,43 +187,30 @@ Rust 中的 生命周期的内容
 
 <span id="Day007"></span>
 
-## Day16
+## Day7
 
-### 事件1： 参加 每周一次的研讨会
+### 事件1： 看RISC-V 特权级指令相关内容
 
-参加组织的会议，了解到了很多相关的内容，着重的
+
 
 ### 事件2： 每日一题
 
-[312.戳气球](https://leetcode-cn.com/problems/burst-balloons/)
+[地下城游戏](https://leetcode-cn.com/problems/dungeon-game/solution/zhi-guan-jie-fa-by-dingiso/)
 
-### 事件3： 总结-提高
+### 解决问题：
 
-对一周的内容进行总结，做出下一周的规划
+Rust 中的 
 
 ### 预计计划：  
 
-1、进入 lab-2 的进程
-2、对 lab-1 的成果进行统一的规划
+1、继续研究RISC-v
+2、温习 操作系统-物理内存管理 的 相关内容
 
-<span id="Day017"></span>
-## Day17
+<span id="Day008"></span>
 
-### 事件1： 钻研lab-2的内容，完成前两个小节
+## Day8
 
-实现了内存的动态分配
-
-<img src="https://github.com/dingiso/DailySchedule/blob/master/img/Day17-1.png?raw=true" alt="内存的动态分配" width="40%" height="40%" />
-
-探测了内核的结尾地址
-
-<img src="https://github.com/dingiso/DailySchedule/blob/master/img/Day17-2.png?raw=true" alt="探测了内核的结尾地址" width="40%" height="40%" />
-
-### 事件2： 每日一题
-
-[312.戳气球](https://leetcode-cn.com/problems/burst-balloons/)
-
-### 事件3： lab-0 的总结
+### 事件1： lab-0
 
 1. 为了借用新的特性 nightly
 2. std 依赖操作系统 `#![no_std]` 禁用
@@ -240,16 +227,138 @@ Rust 中的 生命周期的内容
 13. 输出功能利用`core`中的输出函数调用`SBI`的单字符输出，并利用`println`等宏进行封装
 14. 完善 `panic` 和 `abort` 功能
 
+### 事件2： 每日一题
+
+[不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/solution/jie-ti-si-lu-by-dingiso/)
+
+### 解决问题：
+
+Rust 中的 生命周期的内容
+
 ### 预计计划：  
 
-1、继续 lab-2 的进程
-2、
+1、继续研究RISC-v
+2、温习 操作系统-虚拟存储 的 相关内容
 
-<span id="Day018"></span>
+<span id="Day009"></span>
 
-## Day18
+## Day9
 
-### 事件1： 钻研lab-2的内容
+### 事件1： 总结一周的内容，参加研讨
+
+
+
+### 事件2： 每日一题
+
+[两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/solution/zui-la-ji-dai-ma-mei-you-zhi-yi-by-dingiso/)
+
+### 解决问题：
+
+gdb 调试时， make debug 不成功， 修改debug 值 留下 -s -S 内容 ， 自行打开 gdb调试
+
+### 预计计划：  
+
+1、lab-1
+2、总结 lab-0 的代码，形成体系
+
+<span id="Day010"></span>
+
+## Day10
+
+### 事件1： lab-1
+
+1. 中断处理首先要保存上下文(即寄存器)在栈中,并在中断后恢复,分为两部分: 
+   * context :通用32个寄存器,保存触发中断的指令地址`sepc`和系统状态的`sstatus`
+   * 单列 :保存中断主要信息和原因的 `scause` 和 `stval`,因为后面需要使用所以单独
+2. 利用汇编将寄存器的值存储在栈中,注意栈寄存器`sp`就是`x2`,所以需要空出他
+3. 利用 `STIE` 位开启时钟中断,利用 `sstatus` 的 `SIE` 位,允许内核态被中断打断
+4. 通过`sbi_call` 可以预约下一次的时钟中断,`time`参数就是中断时间
+5. 总结 时钟中断的调用过程
+
+### 事件2： 每日一题
+
+[正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching) 
+
+### 解决问题：
+
+回看  risc -v 的寄存器 架构 ，与 MSU 三种模式
+
+### 预计计划：  
+
+1、总结 lab-1 的内容
+2、温习 操作系统-中断 的 相关内容
+
+<span id="Day011"></span>
+
+## Day11
+
+### 事件1： lab-1
+
+完成实验题
+
+<image src="" alt="" />
+
+### 事件2： 每日一题
+
+[正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching) 
+
+### 解决问题：
+
+sbi 中的中断的情况及其作用
+
+### 预计计划：  
+
+1、总结 lab-1 的内容
+2、温习 操作系统-中断 的 相关内容
+
+<span id="Day012"></span>
+
+## Day12 ,13,14
+
+17 号考科三， 备战科三 + 一门考试
+
+<span id="Day013"></span>
+
+<span id="Day014"></span>
+
+<span id="Day015"></span>
+
+## Day15
+
+### 事件1： lab-2 动态内存分配
+
+1. 对于动态内存分配，我们需要实例一个`堆`对象，而这个对象必须具有以下特征
+
+   * 实现 `Trait GlobalAlloc` 的分配功能
+     * 实现 `alloc` 和 `dealloc` 函数  ， 要求分配连续`size`大小，满足`align`对齐
+   * 使用语义项`#[global_allocator]`进行标记
+
+   编译器便会自动使用我们提供的内存分配函数
+
+2. 先开辟一个`u8`数组，将首地址和长度付给我们定义好的堆对象即可
+
+3. 探寻内核使用的结尾地址，`linker.ld` 说明了结尾地址为 `kernel_end` 我们将此函数实现，并将他的地址 作为 `usize` 输出皆可。
+
+<image src="" alt="" />
+
+### 事件2： 每日一题
+
+[97. 交错字符串](https://leetcode-cn.com/problems/interleaving-string/)
+
+### 解决问题：
+
+回看  risc -v 的寄存器 架构 ，与 MSU 三种模式
+
+### 预计计划：  
+
+1、总结 lab-1 的内容
+2、温习 操作系统-中断 的 相关内容
+
+<span id="Day016"></span>
+
+## Day16
+
+### 事件1： 参加 每周一次的研讨会
 
 参加组织的会议，了解到了很多相关的内容，着重的
 
@@ -257,24 +366,152 @@ Rust 中的 生命周期的内容
 
 [312.戳气球](https://leetcode-cn.com/problems/burst-balloons/)
 
-### 事件3： lab-1 的总结
+### 事件3： 完成lab2
 
-1. 中断处理首先要保存上下文(即寄存器)在栈中,并在中断后恢复,分为两部分: 
+实现了内存的动态分配
 
-   * context :通用32个寄存器,保存触发中断的指令地址`sepc`和系统状态的`sstatus`
-   * 单列 :保存中断主要信息和原因的 `scause` 和 `stval`,因为后面需要使用所以单独
+<img src="https://github.com/dingiso/DailySchedule/blob/master/img/Day17-1.png?raw=true" alt="内存的动态分配" width="40%" height="40%" />
 
-2. 利用汇编将寄存器的值存储在栈中,注意栈寄存器`sp`就是`x2`,所以需要空出他
+探测了内核的结尾地址
 
-3. 利用 `STIE` 位开启时钟中断,利用 `sstatus` 的 `SIE` 位,允许内核态被中断打断
+<img src="https://github.com/dingiso/DailySchedule/blob/master/img/Day17-2.png?raw=true" alt="探测了内核的结尾地址" width="40%" height="40%" />
 
-4. 通过`sbi_call` 可以预约下一次的时钟中断,`time`参数就是中断时间
+### 总结：  
 
-5. 总结 时钟中断的调用过程
+#### 物理页的管理与分配
 
-<img src="https://github.com/dingiso/DailySchedule/blob/master/img/TimeInterrupt.png?raw=true" alt="时钟中断"/>
+1. 页首地址满足 4kB 的倍数 ，页号 x4096 = 页首地址
 
-### 事件4： 小的提议记录
+2. 分配的地址不存在堆或栈中，我们利用`FrameTracker`封装，实现类似于`Box` 的智能指针的相关特性，相当于我们对**页**实现了以下操作：
+
+   * 封装了 `&'static mut` 类型的引用
+   * 提供了 `Drop` 函数，存在生命周期，超出后自动析构
+   * 需要引用计数则外面封装 [`Arc`](alloc::sync::Arc) 
+
+3. 针对所有的物理页，我们实现了一个物理页分配器封装对页的操作
+
+   ```rust
+    pub static ref FRAME_ALLOCATOR: Mutex<FrameAllocator<AllocatorImpl>> = Mutex::new(FrameAllocator::new(Range::from(PhysicalPageNumber::ceil(PhysicalAddress::from(*KERNEL_END_ADDRESS))..PhysicalPageNumber::floor(MEMORY_END_ADDRESS),)));
+   ```
+
+   **`Mutex<FrameAllocator<AllocatorImpl>>`** 
+
+   * `Mutex`对分配器加锁防止多个线程访问，
+
+   * `FrameAllocator` 为主要分配器，
+
+   * `AllocatorImpl` 为分配器算法。
+
+   `PhysicalPageNumber::ceil(PhysicalAddress::from(*KERNEL_END_ADDRESS))..PhysicalPageNumber::floor(MEMORY_END_ADDRESS)`
+
+   分配器分配的内存范围从 `kerne_end` 结束（上取整）开始到 我们可访问内存的最后的（下取整）
+
+4. 分配器算法利用的是实际物理页和起始地址的偏移量
+
+<span id="Day017"></span>
+
+## Day17
+
+### 事件1： 钻研lab-3的内容
+
+### 基础内容 - 关于页表
+
+### 首先： 为什么要用到虚拟地址？
+
+简单理解，这是为了方便程序编写者的一种方法。比如我的程序想要运行在这个操作系统上， 我希望不需要考虑操作系统的实际内存情况，难道我还要看一下操作系统的代码，或翻一下手册么？ ， 我希望我的程序用的就是从 `0x1` 开始的连续地址，那么这个 `0x1` 就是虚拟地址。
+
+### 页表：
+
+但是在操作系统中，实际运行时是需要使用实际物理地址的，那么我们如何推算物理地址呢，我们可以将这种（虚拟地址-物理地址）看作一种函数（映射）关系
+`f (虚拟地址）= 物理地址` 在存储时 就有了两种储存的方法，
+
+1. 第一种 我们将这个 `f` 函数（简单理解是个线性的）关系储存下来 - 也就是 最开始[修改内核](https://rcore-os.github.io/rCore-Tutorial-deploy/docs/lab-3/guide/part-2.html) 中使用的方法， 只需要统一加一个 偏移量即可。
+2. 第二种 我们将每一个 （虚拟地址-物理地址） 也就 (x,y) 按对存储起来，通过查找 虚拟地址，便能获得相应的物理地址。
+
+第二种方法便是我们所说的页表 ， 他是一（多）张，存储这种关系的表，通过查表便能完成 查找物理地址的任务。
+
+> 而且，虚拟地址也是对物理的地址的一种封装方法，可以实现内核对物理地址的权限管理，也就是我们在页表项的标志位，假设我不希望系统内核所在的地址被其他人写入其他内容，我只需要在页表项上
+
+### 多级页表：
+
+这种方法主要是为了节省内存，同时可以方便我们不用跨物理页去查询这张表。那么他为什么可以节省内存呢？
+**举个小栗子：** 内核代码在虚拟地址里 是 `0xffffffff80200000` ， 在实际物理地址是 `0x80200000` ， 在普通页表中我要这么存储， `(0xffffffff80200000,0x80200000,flag)` 这样的。同样在表示内核以 0xffffffff 开头的虚拟地址还有很多，这样会无形中增加很多的空间开销，但我们知道不断存储 `0xffffffff` 是冗余的。所以我们利用分级的方法，可以把页表变成下面的形式（理解方法）：
+
+- 二级页表 `（0xffffffff（虚拟地址的高位），存储下面一级页表的物理页号（首地址） ）`
+- 一级页表 `（0x80200000（低位），0x80200000（物理地址））`
+  通过二级页表查找到一级页表的存储位置，再通过低位找到对应的物理地址。
+
+**那么**我们实际上对于所有 以开头 `0xffffffff` 开头的虚拟地址，二级页表中永远只有一个页表项，这就节省了原来每次都要把他写上的空间。
+
+
+
+### 事件2： 每日一题
+
+[167. 两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
+
+### 事件3：
+
+### 预计计划：  
+
+1、继续 lab-3 的进程
+2、lab-3 实验
+
+<span id="Day018"></span>
+
+## Day18
+
+### 事件1： 完成lab-3
+
+1. 更改 linker.ld 的数据存放起址改为虚拟地址，并在各字段加入对齐，使得一个虚拟页不会有两个段。目的是为了可以对每一个段赋予不同的属性
+
+2. entry.asm 中利用  下面代码使得 CPU模式 变为 Sv39
+
+   ```assembly
+   # 8 << 60 是 satp 中使用 Sv39 模式的记号
+       li t1, (8 << 60)
+       or t0, t0, t1
+       # 写入 satp 并更新 TLB
+       csrw satp, t0
+   ```
+
+   
+
+3. 给出内核使用线性映射的偏移量 并 在 entry.asm 中 建立一个boot_page_table 作为初始页表，
+
+   * 第一个映射是 0x8000_0000 -> 0x8000_0000 VPN3 是 10B 所以放在第三位
+   * 第二个映射是 0xffff_ffff_8000_0000 -> 0x8000_0000 VPN3 是 111111110B 所以放在 510位
+   * 保存第一个映射是违反规则的，但是为了执行 这个asm内的代码，所以要存在这个映射。
+
+4. 将虚拟地址 分为 `0..9 的VPN1` `9..18的VPN2` `18..27的VPN3`
+
+5. **页表项  ：PageTableEntry = 标志位+页号**   |对 物理页号进行封装
+
+6. **页表 ：PageTable** |装满一个物理页的页表项数组
+
+7. **页表智能指针：PageTableTracker** 因为页表太大了，所以利用上文提供的工具 `FrameTracker` ，将这个页表当成一个物理页看待，利用“智能指针”对其进行操作。
+
+8. **内存段：Segment** |在很多情况下虚拟页的单位量级太小了，我们对内存的管理可能一次涉及很多页，为了简化操作，我们将很多虚拟页统一封装为一个`Segment`，它具有以下属性
+
+   * 两种简单的映射类型 ： 线性映射 和 每一帧都有映射
+   * 映射到的一块连续的虚拟地址
+   * 统一的权限标识
+
+9. **实际应用的映射关系：Mapping** | 完成了基础的结构定义，那么我们该实际的对每个线程的映射关系进行封装并完成实际的操作和结构了：
+
+   * 保存了 页表向量 ， 根页表物理页号， 映射信息
+   * `find_entry()` 实现 给定虚拟页号查找物理页号
+   * `map()` 实现了实际数据（未写入页中）的写入并构建映射
+     * 线性则利用 我们`address.rs` 中规定的方式直接转换
+     * `Framed` 则 分割数据 ， 更新页表，写入物理页， 将映射关系写入映射
+   * `activate()` 实现了将页表起使地址写入`satp` ，使用`Sv39`模式并 刷新`TLB`
+
+10. **实现内核的重映射 ：MemorySet** ： 利用我们工作替代原来的蛮夷，
+
+### 事件2： 每日一题
+
+[95. 不同的二叉搜索树 II](https://leetcode-cn.com/problems/unique-binary-search-trees-ii/)
+
+### 事件3： 小的提议记录
 
 lab-1 程序运行状态 Context 推荐加入源文件的注释 , 并去掉 `Scause` 的use
 
@@ -294,7 +531,236 @@ lab-1 程序运行状态 Context 推荐加入源文件的注释 , 并去掉 `Sca
 
 ### 预计计划：  
 
+1、开始进行 lab-4
+2、加油！！
+
+<span id="Day019"></span>
+
+## Day19
+
+### 事件1： 钻研lab-4
+
+1. **线程：Thread** | 线程是我们关注的实际**执行代码的单位**，教程的定义包括
+
+   * 线程 ID  - 唯一标识线程的身份
+
+   * 线程的栈 - 线程占有一段的虚拟空间来进行利用
+
+   * 所属的进程
+
+   * 代表自身情况的可变变量（`Mutex`）- 包括 运行上下文，是否休眠，结束等属性 ， 
+
+     > 利用 `Mutex` 来包装使得 `Arc<Thread>` 保存的线程中的这些值可以被我们使用。
+
+2. **进程： Process** | 资源调度的基本单位，只需要保存自身属性和 线程共享页表，内存空间即可
+
+   * 属于 用户态 还是 内核态
+   * 共用的 一块 内存空间，页表
+
+3. **线程管理器：Processor** | 存放和管理所有的线程，主要包括：
+
+   * 正在执行的线程
+   * 调度器 对线程实现调度，包括线程的添加，移除，进行下一个
+   * 休眠线程-处于等待状态的一些线程
+
+   实现全局的，由`Lock`封装的管理器，我们利用`Mutex`和 `关闭时钟中断`  保证他一直在线
+
+4. 通过设置`Context`进行一个小的实验，进行验证并执行
+
+   * `mv sp a0`  ,  通过 `__restore` 传入一个参数-即我们精心涉及的`Context`
+   * 原来我们是在实验中为了验证中断而开启了中断，现在我们将其放在了线程开始时
+
+5. **中断处理** ： |   线程切换实际为时钟中断的过程，我们需要在中断处理时完成切换
+
+   * 定义的管理器`PROCESSOR`完成当前线程的 上下文 的保存
+   * 管理器为我们分配下一个应该调用的进程，并将他的上下文返回 通过 `__restore` 转换
+     *  如果没有下一个线程，则启动休眠线程，都没有则退出
+
+6. **线程的结束：**| 通过设置 `ra` 时线程顺利结束 
+
+   * 原来线程结束触发`Exception::InstructionPageFault`  ，跳转 `0x0`
+   * 通过触发中断，通知操作系统进行释放，`ecall` 调用 `ebreak`
+   * 将中断包装在结束函数中，标记线程结束，并设置线程结束的 `ra`
+
+7. **内核栈：** | 但发生中断时，会切换到内核态，原来用于处理中断的`sp`指针需要一个内核栈，专门用于在内核态执行函数 - 防止线程的崩溃导致操作系统的崩溃
+
+   * 只需要一个内核栈，因为只有中断时使用内核栈，而不会有两个线程同时中断
+
+   * 内核栈的地址不能放在通用寄存器中，而`sscratch`只有内核态能访问，比较合适
+
+   * 实际的做法: 定义`kernel_stack`分配空间，`interrupt.asm`中对`sscratch`操作
+
+     * 为内核栈分配一段空间
+     * 运行线程时，将内核栈指针保存在`sscratch`寄存器中
+     * 中断时，则从将 `Context` 压入 `sscratch` 指向的栈中（`Context` 的地址为 `sscratch - size_of::<Context>()`），同时用新的栈地址来替换 `sp`（此时 `sp` 也会被复制到 `a0` 作为 `handle_interrupt` 的参数）
+     * 从中断中返回时（`__restore` 时），`a0` 应指向**被压在内核栈中的 `Context`**。此时出栈 `Context` 并且将栈顶保存到 `sscratch` 中
+
+      运行时如何 将内核栈指针保存在`sscratch`中?
+
+### 事件2： 每日一题
+
+[剑指 Offer 11. 旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/)
+
+### 事件3： 待定
+
+### 预计计划：  
+
+1、继续 lab-4 的进程
+2、lab-4 实验
+
+<span id="Day020"></span>
+
+## Day20
+
+### 事件1： lab-4 的图片形式总结
+
+### 事件2： 每日一题
+
+[64. 最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/)
+
+### 事件3： lab-4 实验题
+
+1. 原理：线程切换之中，页表是何时切换的？页表的切换会不会影响程序 / 操作系统的运行？为什么？
+
+   1）线程结束时，ra 结束函数触发时钟中断，中断处理函数调用 `prepare_next_thread()` , 在实际调用 `next_thread.prepare()`  最后通过 `activate()` 激活页表，进行页表的切换
+
+   2）不会影响运行，页表切换发生在中断期间，操作系统运行中，我们设立了内核栈，中断期间调用的，一直存在。
+
+2. 设计：如果不使用 `sscratch` 提供内核栈，而是像原来一样，遇到中断就直接将上下文压栈，请举出（思路即可，无需代码）：
+
+   - 一种情况不会出现问题    - 不操作 sp 
+   - 一种情况导致异常无法处理（指无法进入 `handle_interrupt`）- 不保存 sp 寄存器
+   - 一种情况导致产生嵌套异常（指第二个异常能够进行到调用 `handle_interrupt`，不考虑后续执行情况） - 运行两个线程。在两个线程切换的时候，会需要切换页表。但是此时操作系统运行在前一个线程的栈上，一旦切换，再访问栈就会导致缺页，因为每个线程的栈只在自己的页表中
+   - 一种情况导致一个用户进程（先不考虑是怎么来的）可以将自己变为内核进程，或以内核态执行自己的代码 -  通过 改变 sp 的存储位置， 使得用户进程有能力访问并修改到
+
+3. 实验：当键盘按下 Ctrl + C 时，操作系统应该能够捕捉到中断。实现操作系统捕获该信号并结束当前运行的线程（你可能需要阅读一点在实验指导中没有提到的代码）
+
+   [handler.rs](https://github.com/dingiso/DailySchedule/blob/master/code/实验四/handler.rs)
+
+    通过开启外部中断的方法， 借助 sbi 调用函数，捕捉键盘导致的外部中断，先在  中断处理时打印 ctrl+c 的 sbi 调用返回值，为3 ，判断其为 3 则 `kill_current_thread`
+
+### 预计计划：  
+
+1、开始 lab-5
+
+<span id="Day021"></span>
+
+## Day21
+
+### 事件1： 钻研lab-5
+
+1. 不能一直运行内核 ，我们要实现把读取存储设备的数据，**OpenSBI** 进行扫描并设备通过**MMIO**映射到物理内存的一块了，我们只需要在rust_main 中添加参数，OpenSBI 就会告诉我们映射的地址
+
+   * `_hart_id`:  0,
+
+     `dtb_pa`:  PhysicalAddress(0x82200000)
+
+2. 通过调用 rcore 中的 属性解析`device_tree`库，我们得到的便是一个 建好的树  - **设备树**
+
+   * 通过 递归 从根节点进行递归 ，发现支持 `"virtio,mmio"` ， 就可以加载他的驱动
+   * 初始化设备 时需要进行验证`Magic Number` ， 确定其为设备树
+
+3. 进一步对节点进行判断， 只读取其中的 `Block` 块设备
+
+   * 粒度 为 整**块**，以块为单位读写，（类比硬盘）
+
+4. 实现为 `DMA` 分配物理页的定义和操作 包括 **物理地址-虚拟地址的转换**， **分配和去配操作**
+
+5. 抽象设备 驱动的接口 ，简单的三种方法 ：
+
+   * 读取设备信息
+   * 块设备接口
+     * 读取某个块 到 buffer 中， 实现对数据的读取
+     * 将 buffer 的数据 写入 某个块， 实现写数据
+
+6. 对块设备的抽象，基本为实现上述 的 三个接口。
+
+7. 文件系统 利用 rcore-fs 通过查找全部设备驱动中的第一个存储设备作为根目录。
+
+8. 同时调用`BlockCache::new()` 使得设备在内存中具有`cache`
+
+9. 最后 通过 调用 以实现的接口中的 `ls` 进行 文件名的输出
+
+### 事件2： 每日一题
+
+[1025. 除数博弈](https://leetcode-cn.com/problems/divisor-game/)
+
+### 事件3：  实验4 的fork函数的编写
+
+有点失败，伤心  :cry:
+
+### 预计计划：  
+
+1、继续 lab-6
+
+<span id="Day022"></span>
+
+## Day22
+
+### 事件1： 钻研lab-6
+
+1. 建立 `user` crate，作为用户程序的放置位置 - 并为其去除依赖
+
+2. 通过 `rcore-fs-fuse` 将我们的用户程序编译打包为 **ELF** 文件-转换为 **QCOW_FILE** 格式
+
+3. 利用 `xmas_elf` 解析器将 ELF 文件读到内存中，解析字段，建立**内核映射**（能中断）
+
+4. 修改`Mapping::map` 函数 ， 增加 `init_data`参数为初始化数据
+   * 动态分配内存 - 分配的不一定连续 - 利用**帧分**配的方式
+   * 考虑 如果最后剩下的数据不满足一页的情况
+   * 加载到内存时， 对 `.bss` 段进行初始化
+
+5. 利用汇编参数的传递，实现系统调用，从相应的寄存器中取出调用代号和参数，根据调用代号，进入不同的处理流程，得到处理结果
+
+   * 回数值并继续执行：
+     * 返回值存放在 `x10` 寄存器，`sepc += 4`，继续此 `context` 的执行
+
+   * 程序进入等待
+     * 同样需要更新 `x10` 和 `sepc`，但是需要将当前线程标记为等待，切换其他线程来执行
+
+   * 程序终止
+     * 不需要考虑系统调用的返回，直接删除线程
+
+6. 编写文件的输入输出流 `stdin` `stdout`
+7. 实现条件变量，替代原来的阻塞式，增加处理器利用率，增强交互性
+
+### 事件2： 每日一题
+
+[410. 分割数组的最大值](https://leetcode-cn.com/problems/split-array-largest-sum/)
+
+### 预计计划：  
+
+1、进行总结
+
+<span id="Day023"></span>
+
+## Day23
+
+### 事件1： 对rCore 的第一阶段进行总结
+
+### 事件2： 每日一题
+
+[329. 矩阵中的最长递增路径](https://leetcode-cn.com/problems/longest-increasing-path-in-a-matrix/)
+
+### 预计计划：  
+
 1、继续 lab-2 的进程
 2、
 
-<span id="Day019"></span>
+<span id="Day024"></span>
+
+## Day24
+
+### 事件1： 整理rCore 学习过程中的文档
+
+[所有涉及的文档](https://github.com/dingiso/DailySchedule/tree/master/docs)
+
+### 事件2： 每日一题
+
+[392.判断子序列](https://leetcode-cn.com/problems/is-subsequence/)
+
+#### 尾声
+
+希望接下能进入第二阶段的实习吧。
+
+<span id="Day025"></span>
