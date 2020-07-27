@@ -26,9 +26,7 @@
 3. 利用 `STIE` 位开启时钟中断,利用 `sstatus` 的 `SIE` 位,允许内核态被中断打断
 4. 通过`sbi_call` 可以预约下一次的时钟中断,`time`参数就是中断时间
 5. 总结 时钟中断的调用过程
-
-![时钟中断](D:\Download\TimeInterrupt.png)
-
+<img src="https://github.com/dingiso/DailySchedule/img/TimeInterrupt.png"  alt="时钟中断" />
 ## lab-2 简单总结
 
 1. 对于动态内存分配，我们需要实例一个`堆`对象，而这个对象必须具有以下特征
@@ -206,7 +204,7 @@
 
       运行时如何 将内核栈指针保存在`sscratch`中?
 
-   ![sscratch](D:\Download\sscratch.png)
+<img src="https://github.com/dingiso/DailySchedule/img/sscratch.png"  alt="sscratch" />
 
 ## lab-5
 
@@ -236,7 +234,7 @@
 
 6. 对块设备的抽象，基本为实现上述 的 三个接口。
 
-   <img src="http://localhost:4000/docs/lab-5/pics/design.png" alt="img" style="zoom:33%;" />
+  <img src="https://github.com/dingiso/DailySchedule/img/design.png"  alt="design" />
 
    
 
