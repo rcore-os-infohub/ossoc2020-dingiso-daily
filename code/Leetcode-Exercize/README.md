@@ -18,3 +18,5 @@
 [174地下城游戏 - 直观解法](https://leetcode-cn.com/problems/dungeon-game/solution/zhi-guan-jie-fa-by-dingiso/)
 
 [392.判定子序列-盘点坑](https://leetcode-cn.com/problems/is-subsequence/solution/na-xie-ke-neng-yu-dao-de-keng-by-dingiso/)
+
+[104. 二叉树的最大深度 - 递归](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/solution/la-ji-ti-jie-di-gui-by-dingiso/)
