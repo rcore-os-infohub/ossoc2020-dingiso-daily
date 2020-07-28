@@ -68,3 +68,25 @@ impl Solution {
         }
     }
 }
+
+/**
+ * 想麻烦了 - 误
+ * 
+ */
+
+use std::cell::RefCell;
+use std::rc::Rc;
+//static mut IfNone: bool = false;
+struct Solution;
+impl Solution {
+    pub fn max_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
+        match root {
+            Some(r) => {
+                Solution::max_depth(r.borrow().left.clone())
+                    .max(Solution::max_depth(r.borrow().right.clone()))
+                    + 1
+            }
+            None => 0,
+        }
+    }
+}
