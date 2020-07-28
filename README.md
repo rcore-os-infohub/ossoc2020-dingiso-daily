@@ -196,6 +196,7 @@ Rust 中的 生命周期的内容
 ### 事件2： 每日一题
 
 [地下城游戏](https://leetcode-cn.com/problems/dungeon-game/solution/zhi-guan-jie-fa-by-dingiso/)
+[源文件](https://github.com/dingiso/DailySchedule/blob/master/code/Leetcode-Exercize/174_%E5%9C%B0%E4%B8%8B%E5%9F%8E%E6%B8%B8%E6%88%8F.rs)
 
 ### 解决问题：
 
@@ -230,6 +231,7 @@ Rust 中的
 ### 事件2： 每日一题
 
 [不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/solution/jie-ti-si-lu-by-dingiso/)
+[源文件](https://github.com/dingiso/DailySchedule/blob/master/code/Leetcode-Exercize/96.%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91.rs)
 
 ### 解决问题：
 
@@ -251,10 +253,45 @@ Rust 中的 生命周期的内容
 ### 事件2： 每日一题
 
 [两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/solution/zui-la-ji-dai-ma-mei-you-zhi-yi-by-dingiso/)
+[源文件](https://github.com/dingiso/DailySchedule/blob/master/code/Leetcode-Exercize/350.%20%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%20II.rs)
 
 ### 解决问题：
 
 gdb 调试时， make debug 不成功， 修改debug 值 留下 -s -S 内容 ， 自行打开 gdb调试
+### gdb常用命令总结
+**list(简写 l)**  ： 查看源程序代码，默认显示10行，按回车键继续看余下的
+**list 行号**：将显示当前文件以“行号”为中心的前后10行代码，如：list 12
+**list 函数名**：将显示“函数名”所在函数的源代码，如：list main
+**list ：不带参数**，将接着上一次 list 命令的，输出下边的内容。
+
+**break(简写 b)** ：格式 b 行号，在某行设置断点；
+**b fn1 if a＞b**：条件断点设置
+**break func（break缩写为b）**：在函数func()的入口处设置断点，如：break cb_button
+**delete n**：删除第n个断点
+**disable n**：暂停第n个断点
+**enable n**：开启第n个断点
+**clear n**：清除第n行的断点
+**delete breakpoints**：清除所有断点：
+
+**info b （info breakpoints）** ：显示当前程序的断点设置情况
+* Num： 断点编号
+* Disp：断点执行一次之后是否有效 kep：有效 dis：无效
+* Enb： 当前断点是否有效 y：有效 n：无效
+* Address：内存地址
+* What：位置
+
+**run （简写 r）** ： 其作用是运行程序，当遇到断点后，程序会在断点处停止运行，等待用户输入下一步的命令。
+**continue（简写 c)** ： 继续执行程序，直到下一个断点或者结束；
+**next（简写 n )** ：单步执行程序，但是遇到函数时会直接跳过函数，不进入函数；
+**step(简写 s)** ：单步执行程序，但是遇到函数会进入函数；
+**until**：运行程序直到退出循环体；
+**until+行号**： 运行至某行，不仅仅用来跳出循环；
+**finish**： 运行程序到当前函数完成返回，并打印函数返回时的堆栈地址和返回值及参数值等信息；
+**call 函数(参数)** ：调用程序中可见的函数，并传递“参数”，如：call gdb_test(55)；
+**quit：（简记为 q） ** ：退出gdb；
+
+**print、whatis** + 变量名 ： 查看变量
+
 
 ### 预计计划：  
 
@@ -300,7 +337,7 @@ gdb 调试时， make debug 不成功， 修改debug 值 留下 -s -S 内容 ，
 
 ### 事件2： 每日一题
 
-[正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching) 
+[判断二分图](https://github.com/dingiso/DailySchedule/blob/master/code/Leetcode-Exercize/785.%E5%88%A4%E6%96%AD%E4%BA%8C%E5%88%86%E5%9B%BE.rs) 
 
 ### 解决问题：
 
@@ -343,7 +380,7 @@ sbi 中的中断的情况及其作用
 
 ### 事件2： 每日一题
 
-[97. 交错字符串](https://leetcode-cn.com/problems/interleaving-string/)
+[97. 交错字符串](https://github.com/dingiso/DailySchedule/blob/master/code/Leetcode-Exercize/97.%E4%BA%A4%E9%94%99%E5%AD%97%E7%AC%A6%E4%B8%B2.rs)
 
 ### 解决问题：
 
@@ -364,7 +401,7 @@ sbi 中的中断的情况及其作用
 
 ### 事件2： 每日一题
 
-[312.戳气球](https://leetcode-cn.com/problems/burst-balloons/)
+[312.戳气球](https://github.com/dingiso/DailySchedule/blob/master/code/Leetcode-Exercize/312.%E6%88%B3%E6%B0%94%E7%90%83.rs)
 
 ### 事件3： 完成lab2
 
@@ -447,7 +484,7 @@ sbi 中的中断的情况及其作用
 
 ### 事件2： 每日一题
 
-[167. 两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
+[167. 两数之和 II - 输入有序数组](https://github.com/dingiso/DailySchedule/blob/master/code/Leetcode-Exercize/167.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C.rs)
 
 ### 事件3：
 
@@ -509,7 +546,7 @@ sbi 中的中断的情况及其作用
 
 ### 事件2： 每日一题
 
-[95. 不同的二叉搜索树 II](https://leetcode-cn.com/problems/unique-binary-search-trees-ii/)
+[95. 不同的二叉搜索树 II](https://github.com/dingiso/DailySchedule/blob/master/code/Leetcode-Exercize/95.%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%912.rs)
 
 ### 事件3： 小的提议记录
 
@@ -599,7 +636,7 @@ lab-1 程序运行状态 Context 推荐加入源文件的注释 , 并去掉 `Sca
 
 ### 事件2： 每日一题
 
-[剑指 Offer 11. 旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/)
+[剑指 Offer 11. 旋转数组的最小数字](https://github.com/dingiso/DailySchedule/blob/master/code/Leetcode-Exercize/%E5%89%91%E6%8C%87offer11.%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97.rs)
 
 ### 事件3： 待定
 
@@ -616,7 +653,7 @@ lab-1 程序运行状态 Context 推荐加入源文件的注释 , 并去掉 `Sca
 
 ### 事件2： 每日一题
 
-[64. 最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/)
+[64. 最小路径和](https://github.com/dingiso/DailySchedule/blob/master/code/Leetcode-Exercize/64.%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E5%92%8C.rs)
 
 ### 事件3： lab-4 实验题
 
@@ -740,7 +777,7 @@ lab-1 程序运行状态 Context 推荐加入源文件的注释 , 并去掉 `Sca
 
 ### 事件2： 每日一题
 
-[329. 矩阵中的最长递增路径](https://leetcode-cn.com/problems/longest-increasing-path-in-a-matrix/)
+[329. 矩阵中的最长递增路径](https://github.com/dingiso/DailySchedule/blob/master/code/Leetcode-Exercize/329.%E7%9F%A9%E9%98%B5%E4%B8%AD%E6%9C%80%E9%95%BF%E7%9A%84%E8%B7%AF%E5%BE%84.rs)
 
 ### 预计计划：  
 
@@ -757,7 +794,7 @@ lab-1 程序运行状态 Context 推荐加入源文件的注释 , 并去掉 `Sca
 
 ### 事件2： 每日一题
 
-[392.判断子序列](https://leetcode-cn.com/problems/is-subsequence/)
+[392.判断子序列](https://github.com/dingiso/DailySchedule/blob/master/code/Leetcode-Exercize/392.%E5%88%A4%E6%96%AD%E5%AD%90%E5%BA%8F%E5%88%97.rs)
 
 #### 事件3： 看lab-6 实验
 继续进行lab-6 的实验题 冲冲冲！！！
@@ -767,3 +804,8 @@ lab-1 程序运行状态 Context 推荐加入源文件的注释 , 并去掉 `Sca
 希望接下能进入第二阶段的实习吧。
 
 <span id="Day025"></span>
+## Day25
+
+### 事件1： 每日一题
+[104. 二叉树的最大深度](https://github.com/dingiso/DailySchedule/blob/master/code/Leetcode-Exercize/104.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6.rs)
+<span id="Day026"></span>
