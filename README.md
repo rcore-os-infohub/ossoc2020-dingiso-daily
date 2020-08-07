@@ -828,7 +828,10 @@ lab-1 程序运行状态 Context 推荐加入源文件的注释 , 并去掉 `Sca
 
 ### 计划和总结
 
+### 速度 （有点粗糙） 但是 快速迭代
+
 ### VMO
+
 
 主要的类型 ： 
 
@@ -845,7 +848,8 @@ lab-1 程序运行状态 Context 推荐加入源文件的注释 , 并去掉 `Sca
 树状结构 ：
 
 * 利用 父节点的 偏移量 和 页面限制来实现
-<img src="https://github.com/dingiso/DailySchedule/blob/master/img/VMObject.png?raw=true" alt="rustlings部分练习"  />
+
+<img src="https://github.com/dingiso/DailySchedule/blob/master/img/VMObject.png?raw=true" alt="VMObject图片介绍"  />
 
 ### 简化
 
@@ -869,3 +873,6 @@ lab-1 程序运行状态 Context 推荐加入源文件的注释 , 并去掉 `Sca
 * 基础知识的介绍
 * 代码 和 测试的编写
 * 总结
+
+### 时间计划
+**8.15-30** 期末考试，希望作为时间分配，逐渐慢慢推进
