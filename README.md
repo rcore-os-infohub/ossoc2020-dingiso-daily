@@ -809,3 +809,49 @@ lab-1 程序运行状态 Context 推荐加入源文件的注释 , 并去掉 `Sca
 ### 事件1： 每日一题
 [104. 二叉树的最大深度](https://github.com/dingiso/DailySchedule/blob/master/code/Leetcode-Exercize/104.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6.rs)
 <span id="Day026"></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 计划和总结
+### VMO**
+
+主要的类型 ： 
+
+* VMObjectPaged : 主要的VMO ， 掌控一组物理页面
+  * 父节点
+  * 掌控的物理页面
+  * 映射关系
+  * 标志位  **高速缓存策略**  **pin_count** 等
+
+* VMObjectPhysical ：代表一段连续物理内存
+
+* VMObjectSlice : 物理内存切片
+
+树状结构 ：
+
+* 利用 父节点的 偏移量 和 页面限制来实现
+
+
+### 简化
+
+对树结构的 简化
+
+包括 曾经， **copy_on_write**  利用 一位标志位实现，并调整可读写为，实现不可写，最终在 pagefault的时候在进行 **copy**
+
+#### 到
+
+直接 **copy**
