@@ -851,6 +851,15 @@ lab-1 程序运行状态 Context 推荐加入源文件的注释 , 并去掉 `Sca
 
 <img src="https://github.com/dingiso/DailySchedule/blob/master/img/VMObject.png?raw=true" alt="VMObject图片介绍"  />
 
+
+
+## 目标
+
+
+### 单元测试
+
+完善 `VMO` 部分的 **单元测试**
+
 ### 简化
 
 对树结构的 简化
@@ -861,20 +870,28 @@ lab-1 程序运行状态 Context 推荐加入源文件的注释 , 并去掉 `Sca
 
 直接 **copy**
 
-### 单元测试
 
-完善 `VMO` 部分的 **单元测试**
+### Debug
 
-### 目标
+shell 部分 可能有一些 VMO 部分的bug需要，在`zCore` 整体了解后，de这部分的bug
 
+
+### 建议
 总觉得 Tutorial 对于 学生的理解有点生涩
 我的计划是按照学长的计划
-* 视频**报告** 
+* PPT 或 视频**报告** 
 * 基础知识的介绍
 * 代码 和 测试的编写
 * 总结
 
-### 时间计划
+
+## 时间计划
 **8.15-30** 期末考试，希望作为时间分配，逐渐慢慢推进
 
 **9.1 号之后** 我的目标仍然还是希望继续进行 zCore-Tutorial 可能就是设计 zCore-Tutorial 实验，争取开肝 **zCore-Tutorial v2** 
+
+## 可能遇到的问题
+
+* `debug` 过程中可能遇到不可知的难度
+* `Tutorial` 编写过程中，希望能 以个人为单位，自己完成zCore 整体的复现，可能会遇到问题
+* 等等
