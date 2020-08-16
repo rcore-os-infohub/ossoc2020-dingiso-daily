@@ -82,3 +82,22 @@ where pID = (select pID from press where pName='HM' )
    find presses that each room has books provided by the press . The information should involve: 
 
    * Name of the press 
+   
+6. * Name of the press 
+
+```sql
+select pName
+from  press
+where not exists (
+(select rID from room)
+    except
+(select dstinct rID from book natural join shelf 
+where book.pID=press.pID group by rID)
+) 
+```
+
+
+
+
+
+
